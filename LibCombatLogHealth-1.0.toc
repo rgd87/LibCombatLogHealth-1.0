@@ -1,0 +1,8 @@
+## Interface: 50100
+## Title: LibCombatLogHealth-3.0
+## Author: d87
+
+LibStub\LibStub.lua
+CallbackHandler-1.0\CallbackHandler-1.0.lua
+
+LibCombatLogHealth-1.0\LibCombatLogHealth-1.0.lua
