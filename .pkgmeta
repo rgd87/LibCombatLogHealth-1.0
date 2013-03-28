@@ -1,4 +1,4 @@
-package-as: LibCombatLogHealth
+package-as: LibCombatLogHealth-1.0
 
 externals:
     libs/LibStub:
@@ -8,4 +8,4 @@ externals:
         url: svn://svn.wowace.com/wow/callbackhandler/mainline/trunk/CallbackHandler-1.0
         tag: latest
 
-manual-changelog: CHANGELOG.txt
+
