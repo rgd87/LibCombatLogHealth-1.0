@@ -1,4 +1,5 @@
 package-as: LibCombatLogHealth-1.0
+enable-nolib-creation: no
 
 externals:
     LibStub:
