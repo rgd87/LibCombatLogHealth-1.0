@@ -51,7 +51,7 @@ eventType - either nil when event comes from combat log, or "UNIT_AURA" to indic
 --]================]
 
 
-local MAJOR, MINOR = "LibCombatLogHealth-1.0", 1.3
+local MAJOR, MINOR = "LibCombatLogHealth-1.0", 1.4
 local lib = LibStub:NewLibrary(MAJOR, MINOR)
 if not lib then return end
 
@@ -269,7 +269,7 @@ function callbacks.OnUsed()
     f:RegisterEvent"COMBAT_LOG_EVENT_UNFILTERED"
     -- f:RegisterEvent"UNIT_HEALTH_FREQUENT"
     f:RegisterEvent"UNIT_HEALTH"
-    if not UnitGUID("player") then return end -- for cases when they aren't available yet
+    if not UnitGUID("player") or UnitHealth("player") == 0 then return end -- for cases when they aren't available yet
     f:GROUP_ROSTER_UPDATE()
 end
 
