@@ -1,5 +1,5 @@
 --[================[
-LibCombatLogHealth-1.0 
+LibCombatLogHealth-1.0
 Author: d87
 Description: Provides unit health updates from combat log event.
 
@@ -51,7 +51,7 @@ eventType - either nil when event comes from combat log, or "UNIT_AURA" to indic
 --]================]
 
 
-local MAJOR, MINOR = "LibCombatLogHealth-1.0", 1.4
+local MAJOR, MINOR = "LibCombatLogHealth-1.0", 5
 local lib = LibStub:NewLibrary(MAJOR, MINOR)
 if not lib then return end
 
@@ -162,7 +162,7 @@ function f:UNIT_HEALTH(event, unit)
 
     for i,hval in ipairs(log) do
         if hval == uh then
-            if uht - logtime[i] < 2 then 
+            if uht - logtime[i] < 2 then
                 clh[SYNC] = true -- synchronized
                 clh[SYNC_TIME] = nil
                 if not was_synced or uh == 0 then
@@ -208,7 +208,7 @@ function f:COMBAT_LOG_EVENT_UNFILTERED(event)
     srcGUID, srcName, srcFlags, srcFlags2,
     dstGUID, dstName, dstFlags, dstFlags2,
     arg1, arg2, arg3, arg4, arg5 = CombatLogGetCurrentEventInfo()
-    
+
     local unit = guidMap[dstGUID]
     if unit then
         local amount
