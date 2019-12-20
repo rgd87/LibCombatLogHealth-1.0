@@ -51,7 +51,7 @@ eventType - either nil when event comes from combat log, or "UNIT_AURA" to indic
 --]================]
 
 
-local MAJOR, MINOR = "LibCombatLogHealth-1.0", 5
+local MAJOR, MINOR = "LibCombatLogHealth-1.0", 11
 local lib = LibStub:NewLibrary(MAJOR, MINOR)
 if not lib then return end
 
