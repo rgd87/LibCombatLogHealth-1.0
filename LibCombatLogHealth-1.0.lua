@@ -194,12 +194,9 @@ function f:UNIT_HEALTH(event, unit)
 end
 
 function f:PLAYER_ENTERING_WORLD()
-    C_Timer.After(2, function()
-        for unit, data in pairs(CLHealth) do
-            data[SYNC] = false
-            callbacks:Fire("COMBAT_LOG_HEALTH", unit, event)
-        end
-    end)
+    for unit, data in pairs(CLHealth) do
+        data[SYNC] = false
+    end
 end
 
 function f:COMBAT_LOG_EVENT_UNFILTERED(event)
