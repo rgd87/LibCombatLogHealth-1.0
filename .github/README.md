@@ -1,5 +1,7 @@
 # LibCombatLogHealth-1.0
 
+## **OBSOLETE IN SHADOWLANDS**
+
 Combat log events occur a lot more frequentrly than UNIT_HEALTH,
 this library tracks incoming healing and damage and adjusts health values.
 As a result you can see health updates sooner and more often.
@@ -28,6 +30,10 @@ Or at least it doesn't mash up heals with damage.
 In short, if you just listen to both UNIT_HEALTH and UNIT_HEALTH_FREQUENT,
 that's a decent compromise.
 
+Shadowlands
+--------------------
+
+In 9.0 there's a new UNIT_HEALTH that is very fast. By the look of it, it's as fast as combat log.
 
 Usage:
 ---------
